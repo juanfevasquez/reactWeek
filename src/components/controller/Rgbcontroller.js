@@ -3,20 +3,33 @@ import createReactClass from 'create-react-class';
 import './Rgbcontroller.css';
 
 var Rgbcontroller = createReactClass({
+    validateClass: function(){
+        var state = this.props.state;
+        if(state.R > 210 && state.G > 210 && state.B > 210){
+            var classData = {
+                colorId: 'colorId dark'
+            }
+            return classData
+        } else {
+            var classDefault = {
+                colorId: 'colorId'
+            }
+            return classDefault
+        }
+    },
     render: function(){
-       console.log(this.props.default);
         var inputPropierties = {
             type: 'range',
             min: '0',
             max: '255',
             defaultValue: this.props.default, 
             onChange: this.props.update
-       };
+        };
         var containerCLass = {
-            class: 'controller'
+            className: 'controller'
         };
         var colorIdClass = {
-            class: 'colorId'
+            className: this.validateClass().colorId
         }
 
        return(
@@ -24,8 +37,8 @@ var Rgbcontroller = createReactClass({
                 React.createElement('h1', colorIdClass, this.props.id),
                 React.createElement('input', inputPropierties)
             )
-       )
-   }
+        )
+    }
 })
 
 export default Rgbcontroller;

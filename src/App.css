@@ -17,6 +17,11 @@
   text-align: center
 }
 
+.container.dark,
+.result.dark {
+  color: rgb(0,0,0);
+}
+
 .title {
   font-size: 50px;
   padding: 10px;
@@ -41,4 +46,22 @@
   font-family: 'Press Start 2P', cursive;
   color: rgb(255,255,255);
   padding-top: 50px;
+}
+
+@media only screen and (max-width : 571px) {
+  .title {
+    font-size: 25px;
+    padding: 5px;
+  }
+  .container {
+    padding: 25px;
+  }
+  .subtitle {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .result {
+    font-size: 10px;
+  }
 }

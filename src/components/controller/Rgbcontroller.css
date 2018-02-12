@@ -10,6 +10,10 @@
     margin: 15px 
 }
 
+.colorId.dark {
+    color: rgb(0,0,0); 
+}
+
 input[type=range] {
     /*removes default webkit styles*/
     -webkit-appearance: none;
@@ -20,6 +24,7 @@ input[type=range] {
     cursor: move;
     border-radius: 4px;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
     width: 300px;
     height: 5px;
@@ -27,6 +32,7 @@ input[type=range]::-webkit-slider-runnable-track {
     border: none;
     border-radius: 3px;
 }
+
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
@@ -36,9 +42,11 @@ input[type=range]::-webkit-slider-thumb {
     background:rgb(136, 136, 136);
     margin-top: -4px;
 }
+
 input[type=range]:focus {
     outline: none;
 }
+
 input[type=range]:focus::-webkit-slider-runnable-track {
     background: rgb(204, 204, 204);
 }
@@ -50,6 +58,7 @@ input[type=range]::-moz-range-track {
     border: none;
     border-radius: 3px;
 }
+
 input[type=range]::-moz-range-thumb {
     border: none;
     height: 16px;
@@ -78,14 +87,17 @@ input[type=range]::-ms-track {
     /*remove default tick marks*/
     color: transparent;
 }
+
 input[type=range]::-ms-fill-lower {
     background: #777;
     border-radius: 10px;
 }
+
 input[type=range]::-ms-fill-upper {
     background: #ddd;
     border-radius: 10px;
 }
+
 input[type=range]::-ms-thumb {
     border: none;
     height: 16px;
@@ -93,9 +105,17 @@ input[type=range]::-ms-thumb {
     border-radius: 50%;
     background:#888;
 }
+
 input[type=range]:focus::-ms-fill-lower {
     background: #888;
 }
+
 input[type=range]:focus::-ms-fill-upper {
     background: #ccc;
+} 
+
+@media only screen and (max-width : 571px) {
+    input[type=range] {
+        width: 150px;
+    }
 }
