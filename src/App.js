@@ -74,8 +74,7 @@ var App = createReactClass({
         };
         var resultClass = {
             className: isDarkResult
-        }
-        //sconsole.log(this.state, '------------');
+        };
         return (
             React.createElement("section", containerClass, 
                 React.createElement('div', titlesClass,
